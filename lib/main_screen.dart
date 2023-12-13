@@ -4,13 +4,13 @@ import 'package:flutter_test_project/model/tourism_place.dart';
 import 'detail_screen.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Application'),
+        title: const Text('Application'),
       ),
       body: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
@@ -27,7 +27,7 @@ class MainScreen extends StatelessWidget {
 }
 
 class TourismPlaceGrid extends StatelessWidget {
-  const TourismPlaceGrid({Key? key, required this.gridCount}) : super(key: key);
+  const TourismPlaceGrid({super.key, required this.gridCount});
 
   final int gridCount;
 
@@ -84,7 +84,7 @@ class TourismPlaceGrid extends StatelessWidget {
 }
 
 class TourismPlaceList extends StatelessWidget {
-  const TourismPlaceList({Key? key}) : super(key: key);
+  const TourismPlaceList({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,7 +3,7 @@ import 'package:flutter_test_project/model/tourism_place.dart';
 
 class DetailScreen extends StatelessWidget {
   final TourismPlace place;
-  const DetailScreen({Key? key, required this.place}) : super(key: key);
+  const DetailScreen({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class DetailScreen extends StatelessWidget {
 
 class DetailWebPage extends StatefulWidget {
   final TourismPlace place;
-  const DetailWebPage({Key? key, required this.place}) : super(key: key);
+  const DetailWebPage({super.key, required this.place});
 
   @override
   State<DetailWebPage> createState() => _DetailWebPageState();
@@ -185,7 +185,7 @@ class _DetailWebPageState extends State<DetailWebPage> {
 }
 
 class FavoriteButton extends StatefulWidget {
-  const FavoriteButton({Key? key}) : super(key: key);
+  const FavoriteButton({super.key});
 
   @override
   _FavoriteButtonState createState() => _FavoriteButtonState();
@@ -210,7 +210,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
 
 class DetailMobilePage extends StatelessWidget {
   final TourismPlace place;
-  const DetailMobilePage({Key? key, required this.place}) : super(key: key);
+  const DetailMobilePage({super.key, required this.place});
 
   @override
   Widget build(BuildContext context) {
@@ -250,7 +250,7 @@ class DetailMobilePage extends StatelessWidget {
                 child: Text(
                   place.name,
                   textAlign: TextAlign.center,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontFamily: 'Staatliches',
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
@@ -263,8 +263,8 @@ class DetailMobilePage extends StatelessWidget {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                      Icon(Icons.calendar_today),
-                      SizedBox(
+                      const Icon(Icons.calendar_today),
+                      const SizedBox(
                         height: 8.0,
                       ),
                       Text(
@@ -275,8 +275,8 @@ class DetailMobilePage extends StatelessWidget {
                   ),
                   Column(
                     children: <Widget>[
-                      Icon(Icons.access_time),
-                      SizedBox(height: 8.0),
+                      const Icon(Icons.access_time),
+                      const SizedBox(height: 8.0),
                       Text(
                         place.openTime,
                         style: informationTextStyle,
@@ -285,8 +285,8 @@ class DetailMobilePage extends StatelessWidget {
                   ),
                   Column(
                     children: <Widget>[
-                      Icon(Icons.attach_money_rounded),
-                      SizedBox(height: 8.0),
+                      const Icon(Icons.attach_money_rounded),
+                      const SizedBox(height: 8.0),
                       Text(
                         place.ticketPrice,
                         style: informationTextStyle,
@@ -301,7 +301,7 @@ class DetailMobilePage extends StatelessWidget {
               child: Text(
                 place.description,
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16.0),
+                style: const TextStyle(fontSize: 16.0),
               ),
             ),
             SizedBox(
